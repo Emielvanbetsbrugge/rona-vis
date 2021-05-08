@@ -1,0 +1,7 @@
+.wrapper {
+  width: 100%;
+  overflow-x: hidden;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+}
