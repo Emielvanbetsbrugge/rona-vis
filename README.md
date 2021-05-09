@@ -1,4 +1,18 @@
-# Getting Started with Create React App
+# Project domain
+
+This site is hosted on Netlify, check it out: https://awesome-heisenberg-4d6516.netlify.app/
+
+# Design plan:
+
+The idea was to visualise the data based on months, clicking the bottom links, would show you the correct month and would animate to the left. So the next month becomes visible. Unfortunately, the data is based on each day, so working with a date selector is the best decision.
+
+![Original design plan](https://github.com/Emielvanbetsbrugge/rona-vis/blob/main/interactive_original_design.png)
+
+# Project setup
+
+This project is set up with Create React App. This requires [Node](https://nodejs.org/en/) to be installed. Minimum version required is v8. More info below.
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -44,3 +58,5 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+
