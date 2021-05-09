@@ -1,0 +1,18 @@
+.wrapper {
+  display: flex;
+  color: white;
+  opacity: 0.5;
+  font-family: "Neue Pixel Sans";
+}
+
+p {
+  margin: 0;
+}
+
+section:first-of-type {
+  margin-right: 45px;
+}
+
+.location {
+  width: 200px;
+}

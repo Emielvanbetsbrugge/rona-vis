@@ -1,5 +1,16 @@
 .link {
   font-family: "Neue Pixel Sans";
-  font-size: 7.5rem;
+  font-size: 8.5rem;
   color: white;
+  text-decoration: none;
+}
+
+.title {
+  font-size: 15.5rem;
+  line-height: 13rem;
+  margin-right: 45px;
+}
+
+.nonActive {
+  opacity: 0.2;
 }

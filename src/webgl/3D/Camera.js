@@ -8,7 +8,7 @@ class Camera extends PerspectiveCamera {
     this.tweenTarget = new Vector3();
     this.firstTime = true;
 
-    this.position.set(0, 0, 5);
+    this.position.set(0, 0, 10);
     this.orbitControls = new OrbitControls(this, renderer.domElement);
     this.orbitControls.enableDamping = true;
     this.orbitControls.rotateSpeed = 0.25;

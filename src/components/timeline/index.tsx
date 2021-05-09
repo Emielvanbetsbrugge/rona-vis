@@ -4,8 +4,10 @@ import styles from "./styles.module.css";
 const Timeline = () => {
   return (
     <nav className={styles.wrapper}>
-      <Link link="/jan-2019">January</Link>
-      <Link link="/feb-2019">February</Link>
+      <Link link="#jan-2019" active={true}>
+        January
+      </Link>
+      <Link link="#feb-2019">February</Link>
     </nav>
   );
 };
