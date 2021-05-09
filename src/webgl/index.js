@@ -9,7 +9,7 @@ import Raycasters from "./3D/raycaster";
 
 export default class WebGL {
   constructor({ canvas }) {
-    this.renderer = new Renderer({ canvas });
+    this.renderer = new Renderer({ canvas, alpha: true });
     this.camera = new Camera(
       45,
       window.innerWidth / window.innerHeight,
@@ -32,10 +32,11 @@ export default class WebGL {
   addEvents() {
     Broadcaster.on(EVENT.UPDATE_DATA, (data) => {
       this.data = data;
-      if (!this.objects) {
+      if (!this.meshes) {
         this.addObjects();
+      } else {
+        this.updateObjects();
       }
-      this.updateObjects();
     });
 
     window.addEventListener("resize", this.resize.bind(this));
@@ -49,18 +50,24 @@ export default class WebGL {
   }
 
   addObjects() {
+    this.meshes = [];
     this.objects = [];
 
     for (let i = 0; i < this.data.length; i++) {
       if (this.data && this.data[i]) {
         const currentBall = new Ball(this.data[i], i);
         this.scene.add(currentBall.mesh);
-        this.objects[i] = currentBall.mesh;
+        this.meshes[i] = currentBall.mesh;
+        this.objects[i] = currentBall;
       }
     }
   }
 
-  updateObjects() {}
+  updateObjects() {
+    this.objects.map((object, index) => {
+      return object.update(this.data[index], index);
+    });
+  }
 
   resize() {
     this.renderer.resize();
@@ -69,9 +76,8 @@ export default class WebGL {
 
   render() {
     this.camera.orbitControls.update();
-    if (this.objects && this.objects.length > 0) {
-      this.raycasters.test(this.mouse, this.objects);
-      // console.log(selected.index);
+    if (this.meshes && this.meshes.length > 0) {
+      this.raycasters.test(this.mouse, this.meshes);
     }
     this.renderer.render(this.scene, this.camera);
     window.requestAnimationFrame(this.render.bind(this));

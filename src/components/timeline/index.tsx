@@ -1,13 +1,16 @@
 import Link from "../link";
 import styles from "./styles.module.css";
 
+/**
+ * Sadly the data is given day by day, which does not make this possible.
+ */
 const Timeline = () => {
   return (
     <nav className={styles.wrapper}>
-      <Link link="#jan-2019" active={true}>
+      <Link link="#2020-01-30" active={true}>
         January
       </Link>
-      <Link link="#feb-2019">February</Link>
+      <Link link="#2020-01-31">February</Link>
     </nav>
   );
 };

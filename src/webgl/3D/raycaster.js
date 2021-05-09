@@ -17,9 +17,9 @@ export default class Raycasters {
     this.caster.setFromCamera(mouse, this.camera);
     const intersection = this.caster.intersectObjects(objects);
 
-    objects.map((object) => {
-      return object.scale.set(1, 1, 1);
-    });
+    // objects.map((object) => {
+    //   return object.scale.set(1, 1, 1);
+    // });
 
     if (intersection.length === 0 && selected) {
       setSelected(undefined);
@@ -28,7 +28,7 @@ export default class Raycasters {
       if (selected !== intersection[0].object) {
         setSelected(intersection[0].object);
       }
-      intersection[0].object.scale.addScalar(0.1);
+      // intersection[0].object.scale.addScalar(0.1);
     }
   }
 }

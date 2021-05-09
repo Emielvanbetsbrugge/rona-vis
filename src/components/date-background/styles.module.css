@@ -1,0 +1,20 @@
+@keyframes loop {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.background {
+  font-size: 28.125rem;
+  color: white;
+  position: absolute;
+  width: 3000px;
+  font-family: "Neue Pixel Sans";
+  opacity: 0.3;
+  z-index: -2;
+
+  animation: loop 5s ease-in-out infinite;
+}
