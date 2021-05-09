@@ -4,6 +4,12 @@ This site is hosted on Netlify, check it out: https://awesome-heisenberg-4d6516.
 
 Local setup down below.
 
+Project is built with a combination of React and Three.js. React is using TypeScript, Three.js is using normal javascipt (for speed reasons). 
+
+This was built in 5-6 hours, so don't expect too much.
+
+The visualisation is done with Three.js, just some simple spheres who change color & size based on the amount of cases that day for that location. I've enabled OrbitControls for this, so feel free to drag around. These can be extended much further into other visualisations but it shows the basics of communications between React state and WebGL.
+
 ## Design plan:
 
 The idea was to visualise the data based on months, clicking the bottom links, would show you the correct month and would animate to the left. So the next month becomes visible. Unfortunately, the data is based on each day, so working with a date selector is the best decision.
@@ -13,6 +19,8 @@ The idea was to visualise the data based on months, clicking the bottom links, w
 ## Project setup
 
 This project is set up with Create React App. This requires [Node](https://nodejs.org/en/) to be installed. Minimum version required is v8. More info below.
+
+Kick off after cloning the repo onto your machine with a ```npm install``` and then run ```npm start```. Enjoy.
 
 ### Getting Started with Create React App
 
